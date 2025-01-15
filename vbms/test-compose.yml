@@ -1,0 +1,33 @@
+services:
+  ict4bd_influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    ports:
+      - "8086:8086"
+    volumes:
+      - influxdb_data:/var/lib/influxdb
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=root
+      - DOCKER_INFLUXDB_INIT_PASSWORD=123456789
+      - DOCKER_INFLUXDB_INIT_ORG=ICT4BD
+      - DOCKER_INFLUXDB_INIT_BUCKET=GROUP2
+      - DOCKER_INFLUXDB_INIT_RETENTION=1w
+      - DOCKER_INFLUXDB_INIT_ADMIN_TOKEN=ndfNUAw_2gWyW5GAhKiTQIcrIQ2JBxd2SMGkXkHLQeyDRoI2lqTZanaf9z3jaG3SQoACWH-qaOnh4if__eJMlg==
+
+  ict4bd_mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - mosquitto_data:/mosquitto/data
+      - mosquitto_log:/mosquitto/log
+      - mosquitto_config:/mosquitto/config
+
+volumes:
+  influxdb_data:
+  mosquitto_data:
+  mosquitto_log:
+  mosquitto_config:

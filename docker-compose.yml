@@ -1,0 +1,8 @@
+services:
+  vbms:
+    platform: linux/amd64
+    image: vbms
+    container_name: vbms
+    build:
+      context: ./VBMS
+      dockerfile: Dockerfile
