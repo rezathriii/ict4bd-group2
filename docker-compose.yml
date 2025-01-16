@@ -1,8 +1,22 @@
 services:
-  vbms:
+  gp2_idf2fmu:
     platform: linux/amd64
-    image: vbms
-    container_name: vbms
     build:
-      context: ./VBMS
+      context: ./idf2fmu
       dockerfile: Dockerfile
+    image: gp2_idf2fmu
+    container_name: gp2_idf2fmu
+    environment:
+      ENERGYPLUSTOFMU_PATH: "/app/EnergyPlusToFMU/Scripts/EnergyPlusToFMU.py"
+      ENERGYPLUS_PATH: "/usr/local/EnergyPlus-9-6-0/Energy+.idd"
+      EPW_PATH: "/shared/org/weather.epw"
+      IDF_PATH: "/shared/org/opt_model.idf"
+    volumes:
+      - ./shared:/shared
+    networks:
+      - gp2_network
+#    stdin_open: true
+#    tty: true
+
+networks:
+  gp2_network:
