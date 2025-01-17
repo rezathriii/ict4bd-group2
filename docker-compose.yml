@@ -15,8 +15,18 @@ services:
       - ./shared:/shared
     networks:
       - gp2_network
-#    stdin_open: true
-#    tty: true
+
+  gp2_vbms:
+    platform: linux/amd64
+    build:
+      context: ./vbms
+      dockerfile: Dockerfile
+    image: gp2_vbms
+    container_name: gp2_vbms
+    volumes:
+      - ./shared:/shared
+    networks:
+      - gp2_network
 
 networks:
   gp2_network:
