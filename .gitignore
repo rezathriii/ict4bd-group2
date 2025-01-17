@@ -1,7 +1,7 @@
 shared/fmu/
 shared/logs/
 shared/org/*
-!shared/org/opt_model.idf
+!shared/org/opt_model_V242.idf
 !shared/org/weather.epw
 !shared/org/socket.cfg
 

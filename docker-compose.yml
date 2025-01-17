@@ -30,3 +30,4 @@ services:
 
 networks:
   gp2_network:
+    driver: bridge
