@@ -1,5 +1,9 @@
 shared/fmu/
 shared/logs/
+shared/org/*
+!shared/org/opt_model.idf
+!shared/org/weather.epw
+!shared/org/socket.cfg
 
 ###########################
 # MacOS gitignore template

@@ -1,6 +1,7 @@
 import json
 from eppy.modeleditor import IDF
-from CONSTANTS import *
+from src.CONSTANTS import *
+from fmpy.validation import validate_fmu
 
 
 def list_unique_zones(idf_file_path):
@@ -15,4 +16,8 @@ def list_unique_zones(idf_file_path):
     return json.dumps(list(unique_zones))
 
 
-print(list_unique_zones(IDF_FILE_PATH))
+def fmu_validation(fmu_path="/shared/fmu/opt_model.fmu"):
+    validation_result = validate_fmu(fmu_path)
+
+    print("\n🔍 FMU Validation Result:")
+    print(validation_result)
