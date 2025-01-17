@@ -4,7 +4,7 @@ Version,
     9.6;                      !- Version Identifier
 
 ExternalInterface,
-    FunctionalMockupUnitExport; !- Type of External Interface
+    FunctionalMockupUnitExport;   !- Name of the External Interface
 
 SimulationControl,
     Yes,                      !- Do Zone Sizing Calculation
