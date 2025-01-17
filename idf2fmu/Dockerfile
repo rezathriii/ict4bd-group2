@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -13,10 +13,10 @@ RUN add-apt-repository ppa:deadsnakes/ppa && \
     apt install -y python3.8 python3.8-distutils && \
     apt clean && rm -rf /var/lib/apt/lists/*
 
-RUN wget "https://github.com/NREL/EnergyPlus/releases/download/v9.6.0/EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu20.04-x86_64.sh" && \
-    chmod +x EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu20.04-x86_64.sh && \
-    echo "y" | bash EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu20.04-x86_64.sh --silent --prefix=/usr/local/EnergyPlus-9-6-0 && \
-    rm EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu20.04-x86_64.sh
+RUN wget "https://github.com/NREL/EnergyPlus/releases/download/v9.6.0/EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu18.04-x86_64.sh" && \
+    chmod +x EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu18.04-x86_64.sh && \
+    echo "y" | bash EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu18.04-x86_64.sh --silent --prefix=/usr/local/EnergyPlus-9-6-0 && \
+    rm EnergyPlus-9.6.0-f420c06a69-Linux-Ubuntu18.04-x86_64.sh
 
 RUN echo 'export PATH="/usr/local/EnergyPlus-9-6-0:$PATH"' >> /etc/environment && \
     echo 'export PATH="/usr/local/EnergyPlus-9-6-0:$PATH"' > /etc/profile.d/energyplus.sh && \
@@ -35,6 +35,10 @@ RUN wget "https://github.com/lbl-srg/EnergyplusToFMU/releases/download/v3.1.0/En
     rm -f EnergyPlusToFMU-v3.1.0.zip
 
 CMD ["bash", "-c", "mkdir -p /shared/logs; \
+     mkdir -p /shared/fmu; \
      echo 'EnergyPlusToFMU has started...'; \
      cd /shared/fmu && python3 \"${ENERGYPLUSTOFMU_PATH}\" -i \"${ENERGYPLUS_PATH}\" -w \"${EPW_PATH}\" -a 2 \"${IDF_PATH}\" 2>/shared/logs/errors.log; \
-     echo 'EnergyPlusToFMU execution completed! Logs are available at /shared/logs/errors.log'"]
+     echo 'EnergyPlusToFMU execution completed! Logs are available at /shared/logs/errors.log'; \
+     echo 'Unzipping opt_model.fmu into /shared/fmu/...'; \
+     unzip -o /shared/fmu/opt_model.fmu -d /shared/fmu/; \
+     echo 'Unzipping completed. Extracted files are in /shared/fmu/'"]
