@@ -26,8 +26,8 @@ WORKDIR /app
 
 ENV ENERGYPLUSTOFMU_PATH="/app/EnergyPlusToFMU/Scripts/EnergyPlusToFMU.py"
 ENV ENERGYPLUS_PATH="/usr/local/EnergyPlus-9-6-0/Energy+.idd"
-ENV EPW_PATH="/shared/org/weather.epw"
-ENV IDF_PATH="/shared/org/opt_model.idf"
+ENV EPW_PATH="/shared/weather.epw"
+ENV IDF_PATH="/shared/opt_model.idf"
 
 RUN wget "https://github.com/lbl-srg/EnergyplusToFMU/releases/download/v3.1.0/EnergyPlusToFMU-v3.1.0.zip" && \
     mkdir -p EnergyPlusToFMU && \
@@ -35,10 +35,9 @@ RUN wget "https://github.com/lbl-srg/EnergyplusToFMU/releases/download/v3.1.0/En
     rm -f EnergyPlusToFMU-v3.1.0.zip
 
 CMD ["bash", "-c", "mkdir -p /shared/logs; \
-     mkdir -p /shared/fmu; \
      echo 'EnergyPlusToFMU has started...'; \
-     cd /shared/fmu && python3 \"${ENERGYPLUSTOFMU_PATH}\" -i \"${ENERGYPLUS_PATH}\" -w \"${EPW_PATH}\" -a 2 \"${IDF_PATH}\" 2>/shared/logs/errors.log; \
+     cd /shared && python3 \"${ENERGYPLUSTOFMU_PATH}\" -i \"${ENERGYPLUS_PATH}\" -w \"${EPW_PATH}\" -a 2 \"${IDF_PATH}\" 2>/shared/logs/errors.log; \
      echo 'EnergyPlusToFMU execution completed! Logs are available at /shared/logs/errors.log'; \
-     echo 'Unzipping opt_model.fmu into /shared/fmu/...'; \
-     unzip -o /shared/fmu/opt_model.fmu -d /shared/fmu/; \
-     echo 'Unzipping completed. Extracted files are in /shared/fmu/'"]
+     echo 'Unzipping opt_model.fmu into /shared/...'; \
+     unzip -o /shared/opt_model.fmu -d /shared; \
+     echo 'Unzipping completed. Extracted files are in /shared'"]

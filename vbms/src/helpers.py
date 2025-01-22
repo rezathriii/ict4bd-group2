@@ -16,7 +16,7 @@ def list_unique_zones(idf_file_path):
     return json.dumps(list(unique_zones))
 
 
-def fmu_validation(fmu_path="/shared/fmu/opt_model.fmu"):
+def fmu_validation(fmu_path="/shared/opt_model.fmu"):
     validation_result = validate_fmu(fmu_path)
 
     print("\n🔍 FMU Validation Result:")

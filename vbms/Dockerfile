@@ -10,4 +10,4 @@ COPY . /app
 
 RUN chmod +x /app/wait-for-idf2fmu.sh
 
-CMD ["sh", "-c", "chmod 777 /shared/org/socket.cfg || true && exec /app/wait-for-idf2fmu.sh"]
+CMD ["sh", "-c", "chmod 777 /shared/socket.cfg || true && exec /app/wait-for-idf2fmu.sh"]
