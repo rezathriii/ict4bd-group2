@@ -21,3 +21,6 @@ def fmu_validation(fmu_path="/shared/opt_model.fmu"):
 
     print("\n🔍 FMU Validation Result:")
     print(validation_result)
+
+
+# print(list_unique_zones("../../shared/opt_model.idf"))

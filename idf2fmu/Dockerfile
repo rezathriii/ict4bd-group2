@@ -36,8 +36,5 @@ RUN wget "https://github.com/lbl-srg/EnergyplusToFMU/releases/download/v3.1.0/En
 
 CMD ["bash", "-c", "mkdir -p /shared/logs; \
      echo 'EnergyPlusToFMU has started...'; \
-     cd /shared && python3 \"${ENERGYPLUSTOFMU_PATH}\" -i \"${ENERGYPLUS_PATH}\" -w \"${EPW_PATH}\" -a 2 \"${IDF_PATH}\" 2>/shared/logs/errors.log; \
-     echo 'EnergyPlusToFMU execution completed! Logs are available at /shared/logs/errors.log'; \
-     echo 'Unzipping opt_model.fmu into /shared/...'; \
-     unzip -o /shared/opt_model.fmu -d /shared; \
-     echo 'Unzipping completed. Extracted files are in /shared'"]
+     cd /shared && python3 \"${ENERGYPLUSTOFMU_PATH}\" -i \"${ENERGYPLUS_PATH}\" -w \"${EPW_PATH}\" -L -a 2 \"${IDF_PATH}\" 2>/shared/logs/errors.log; \
+     echo 'EnergyPlusToFMU execution completed! Logs are available at /shared/logs/errors.log';"]
