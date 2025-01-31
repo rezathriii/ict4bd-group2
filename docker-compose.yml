@@ -9,7 +9,7 @@ services:
     environment:
       ENERGYPLUSTOFMU_PATH: "/app/EnergyPlusToFMU/Scripts/EnergyPlusToFMU.py"
       ENERGYPLUS_PATH: "/usr/local/EnergyPlus-9-6-0/Energy+.idd"
-      EPW_PATH: "/shared/weather.epw"
+      EPW_PATH: "/shared/paris_2005.epw"
       IDF_PATH: "/shared/opt_model.idf"
     volumes:
       - ./shared:/shared

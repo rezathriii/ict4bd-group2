@@ -1,6 +1,6 @@
 shared/*
 !shared/opt_model_V242.idf
-!shared/weather.epw
+!shared/paris_2005.epw
 !shared/socket.cfg
 
 ###########################
