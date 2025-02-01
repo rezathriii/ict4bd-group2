@@ -3135,19 +3135,7 @@ WindowMaterial:Blind,
     180;                      !- Maximum Slat Angle
 
 Construction,
-    LinearBridgingConstruction,    !- Name
-    LinearBridgingLayer;      !- Outside Layer
-
-Construction,
-    IRTSurface,               !- Name
-    IRTMaterial;              !- Outside Layer
-
-Construction,
     Project internal floor,    !- Name
-    Cast Concrete (Dense)_.1;    !- Outside Layer
-
-Construction,
-    Project internal floor_Rev,    !- Name
     Cast Concrete (Dense)_.1;    !- Outside Layer
 
 Construction,
@@ -3186,34 +3174,11 @@ Construction,
     Gypsum Plastering_.013;    !- Layer 4
 
 Construction,
-    Wall_layer_Rev,           !- Name
-    Gypsum Plastering_.013,    !- Outside Layer
-    Concrete Block (Medium)_.1,    !- Layer 2
-    _InsulationEX_.01,        !- Layer 3
-    Brickwork Outer_.1;       !- Layer 4
-
-Construction,
     Roof_layer,               !- Name
     Asphalt 1_.01,            !- Outside Layer
     _InsulationEX_Roof_.01,    !- Layer 2
     11_RVAL_3,                !- Layer 3
     Plasterboard_.013;        !- Layer 4
-
-Construction,
-    Roof_layer_Rev,           !- Name
-    Plasterboard_.013,        !- Outside Layer
-    12_RVAL_2,                !- Layer 2
-    _InsulationEX_Roof_.01,    !- Layer 3
-    Asphalt 1_.01;            !- Layer 4
-
-Construction,
-    Sgl Clr 6mm - 1001,       !- Name
-    3;                        !- Outside Layer
-
-Construction,
-    Sgl Clr 6mm - 2001,       !- Name
-    3,                        !- Outside Layer
-    20002;                    !- Layer 2
 
 Construction,
     Trp LoE (e2=e5=.1) Clr 3mm/13mm Arg - 1002,    !- Name
@@ -3232,19 +3197,6 @@ Construction,
     41,                       !- Layer 5
     20002;                    !- Layer 6
 
-Construction,
-    Dbl LoE (e2=.1) Clr 6mm/13mm Arg - 1003,    !- Name
-    42,                       !- Outside Layer
-    1004,                     !- Layer 2
-    3;                        !- Layer 3
-
-Construction,
-    Dbl LoE (e2=.1) Clr 6mm/13mm Arg - 2003,    !- Name
-    42,                       !- Outside Layer
-    1004,                     !- Layer 2
-    3,                        !- Layer 3
-    20002;                    !- Layer 4
-
 GlobalGeometryRules,
     LowerLeftCorner,          !- Starting Vertex Position
     CounterClockWise,         !- Vertex Entry Direction
@@ -3259,8 +3211,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3274,8 +3226,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3289,8 +3241,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3304,8 +3256,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3319,8 +3271,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    99.6965,                  !- Volume
-    29.3225,                  !- Floor Area
+    112.00,                   !- Volume
+    32.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3334,8 +3286,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3349,8 +3301,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3364,8 +3316,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3379,8 +3331,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    205.5664,                 !- Volume
-    60.4607,                  !- Floor Area
+    224.00,                   !- Volume
+    64.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -3394,8 +3346,8 @@ Zone,
     1,                        !- Type
     1,                        !- Multiplier
     ,                         !- Ceiling Height
-    99.6965,                  !- Volume
-    29.3225,                  !- Floor Area
+    112.00,                   !- Volume
+    32.00,                    !- Floor Area
     TARP,                     !- Zone Inside Convection Algorithm
     ,                         !- Zone Outside Convection Algorithm
     Yes;                      !- Part of Total Floor Area
@@ -6530,24 +6482,6 @@ Daylighting:Controls,
     300;                      !- Illuminance Setpoint at Reference Point 1
 
 Daylighting:Controls,
-    Block1:CorridorX1f,       !- Name
-    Block1:CorridorX1f,       !- Zone or Space Name
-    SplitFlux,                !- Daylighting Method
-    On,                       !- Availability Schedule Name
-    Continuous,               !- Lighting Control Type
-    0.1,                      !- Minimum Input Power Fraction for Continuous or ContinuousOff Dimming Control
-    0.1,                      !- Minimum Light Output Fraction for Continuous or ContinuousOff Dimming Control
-    1,                        !- Number of Stepped Control Steps
-    1,                        !- Probability Lighting will be Reset When Needed in Manual Stepped Control
-    Block1:CorridorX1f Ref Point 1,    !- Glare Calculation Daylighting Reference Point Name
-    0,                        !- Glare Calculation Azimuth Angle of View Direction Clockwise from Zone yAxis
-    22,                       !- Maximum Allowable Discomfort Glare Index
-    1,                        !- DElight Gridding Resolution
-    Block1:CorridorX1f Ref Point 1,    !- Daylighting Reference Point 1 Name
-    1,                        !- Fraction of Lights Controlled by Reference Point 1
-    300;                      !- Illuminance Setpoint at Reference Point 1
-
-Daylighting:Controls,
     Block2:OfficeXSWX2f,      !- Name
     Block2:OfficeXSWX2f,      !- Zone or Space Name
     SplitFlux,                !- Daylighting Method
@@ -6616,24 +6550,6 @@ Daylighting:Controls,
     22,                       !- Maximum Allowable Discomfort Glare Index
     1,                        !- DElight Gridding Resolution
     Block2:OfficeXNEX2f Ref Point 1,    !- Daylighting Reference Point 1 Name
-    1,                        !- Fraction of Lights Controlled by Reference Point 1
-    300;                      !- Illuminance Setpoint at Reference Point 1
-
-Daylighting:Controls,
-    Block2:CorridorX2f,       !- Name
-    Block2:CorridorX2f,       !- Zone or Space Name
-    SplitFlux,                !- Daylighting Method
-    On,                       !- Availability Schedule Name
-    Continuous,               !- Lighting Control Type
-    0.1,                      !- Minimum Input Power Fraction for Continuous or ContinuousOff Dimming Control
-    0.1,                      !- Minimum Light Output Fraction for Continuous or ContinuousOff Dimming Control
-    1,                        !- Number of Stepped Control Steps
-    1,                        !- Probability Lighting will be Reset When Needed in Manual Stepped Control
-    Block2:CorridorX2f Ref Point 1,    !- Glare Calculation Daylighting Reference Point Name
-    0,                        !- Glare Calculation Azimuth Angle of View Direction Clockwise from Zone yAxis
-    22,                       !- Maximum Allowable Discomfort Glare Index
-    1,                        !- DElight Gridding Resolution
-    Block2:CorridorX2f Ref Point 1,    !- Daylighting Reference Point 1 Name
     1,                        !- Fraction of Lights Controlled by Reference Point 1
     300;                      !- Illuminance Setpoint at Reference Point 1
 
@@ -8679,4 +8595,5 @@ EnvironmentalImpactFactors,
     0.2727;                   !- Total Carbon Equivalent Emission Factor From CO2
 
 Output:Diagnostics,
-    DisplayAdvancedReportVariables;    !- Key 1
+    DisplayAdvancedReportVariables,
+    DisplayExtraWarnings;
