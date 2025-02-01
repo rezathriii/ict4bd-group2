@@ -1,53 +1,53 @@
 !- Windows Line endings 
 
 Version,
-    9.6;                      !- Version Identifier
+    9.6;                           !- Version Identifier
 
 SimulationControl,
-    Yes,                      !- Do Zone Sizing Calculation
-    Yes,                      !- Do System Sizing Calculation
-    No,                       !- Do Plant Sizing Calculation
-    No,                       !- Run Simulation for Sizing Periods
-    Yes,                      !- Run Simulation for Weather File Run Periods
-    ,                         !- Do HVAC Sizing Simulation for Sizing Periods
-    ;                         !- Maximum Number of HVAC Sizing Simulation Passes
+    Yes,                           !- Do Zone Sizing Calculation
+    Yes,                           !- Do System Sizing Calculation
+    No,                            !- Do Plant Sizing Calculation
+    No,                            !- Run Simulation for Sizing Periods
+    Yes,                           !- Run Simulation for Weather File Run Periods
+    ,                              !- Do HVAC Sizing Simulation for Sizing Periods
+    ;                              !- Maximum Number of HVAC Sizing Simulation Passes
 
 Building,
-    Building,                 !- Name
-    0,                        !- North Axis
-    Suburbs,                  !- Terrain
-    0.04,                     !- Loads Convergence Tolerance Value
-    0.4,                      !- Temperature Convergence Tolerance Value
-    FullExterior,             !- Solar Distribution
-    25,                       !- Maximum Number of Warmup Days
-    6;                        !- Minimum Number of Warmup Days
+    Office_Paris,                  !- Name
+    0,                             !- North Axis
+    Suburbs,                       !- Terrain
+    0.04,                          !- Loads Convergence Tolerance Value
+    0.4,                           !- Temperature Convergence Tolerance Value
+    FullExterior,                  !- Solar Distribution
+    25,                            !- Maximum Number of Warmup Days
+    6;                             !- Minimum Number of Warmup Days
 
 ShadowCalculation,
-    PolygonClipping,          !- Shading Calculation Method
-    Periodic,                 !- Shading Calculation Update Frequency Method
-    20,                       !- Shading Calculation Update Frequency
-    15000,                    !- Maximum Figures in Shadow Overlap Calculations
-    SutherlandHodgman,        !- Polygon Clipping Algorithm
-    ,                         !- Pixel Counting Resolution
-    SimpleSkyDiffuseModeling;    !- Sky Diffuse Modeling Algorithm
+    PolygonClipping,               !- Shading Calculation Method
+    Periodic,                      !- Shading Calculation Update Frequency Method
+    20,                            !- Shading Calculation Update Frequency
+    15000,                         !- Maximum Figures in Shadow Overlap Calculations
+    SutherlandHodgman,             !- Polygon Clipping Algorithm
+    ,                              !- Pixel Counting Resolution
+    SimpleSkyDiffuseModeling;      !- Sky Diffuse Modeling Algorithm
 
 SurfaceConvectionAlgorithm:Inside,
-    TARP;                     !- Algorithm
+    TARP;                          !- Algorithm
 
 SurfaceConvectionAlgorithm:Outside,
-    DOE-2;                    !- Algorithm
+    DOE-2;                         !- Algorithm
 
 HeatBalanceAlgorithm,
     ConductionTransferFunction,    !- Algorithm
-    2000,                     !- Surface Temperature Upper Limit
-    1e-08,                    !- Minimum Surface Convection Heat Transfer Coefficient Value
-    1000;                     !- Maximum Surface Convection Heat Transfer Coefficient Value
+    2000,                          !- Surface Temperature Upper Limit
+    1e-08,                         !- Minimum Surface Convection Heat Transfer Coefficient Value
+    1000;                          !- Maximum Surface Convection Heat Transfer Coefficient Value
 
 ZoneAirContaminantBalance,
-    Yes,                      !- Carbon Dioxide Concentration
+    Yes,                                                       !- Carbon Dioxide Concentration
     Default outdoor CO2 levels 400 ppm (Source: NOAA ESRL),    !- Outdoor Carbon Dioxide Schedule Name
-    Yes,                      !- Generic Contaminant Concentration
-    Off 24/7;                 !- Outdoor Generic Contaminant Schedule Name
+    Yes,                                                       !- Generic Contaminant Concentration
+    Off 24/7;                                                  !- Outdoor Generic Contaminant Schedule Name
 
 ZoneCapacitanceMultiplier:ResearchSpecial,
     All,                      !- Name
@@ -65,14 +65,14 @@ ConvergenceLimits,
     25;                       !- Maximum HVAC Iterations
 
 Site:Location,
-    Untitled (01-01:31-12)  (01-01:31-12),    !- Name
-    45.22,                    !- Latitude
-    7.65,                     !- Longitude
+    PARIS,                    !- Name
+    48.857,                   !- Latitude
+    2.352,                    !- Longitude
     1,                        !- Time Zone
-    287;                      !- Elevation
+    38.0;                     !- Elevation
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Untitled (01-01:31-12) Giu,    !- Name
+    Summer Design Day in Office (01-01:31-12) Giu,    !- Name
     6,                        !- Month
     15,                       !- Day of Month
     SummerDesignDay,          !- Day Type
@@ -100,7 +100,7 @@ SizingPeriod:DesignDay,
     0.98;                     !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Untitled (01-01:31-12) Lug,    !- Name
+    Summer Design Day in Office (01-01:31-12) Lug,    !- Name
     7,                        !- Month
     15,                       !- Day of Month
     SummerDesignDay,          !- Day Type
@@ -128,7 +128,7 @@ SizingPeriod:DesignDay,
     0.98;                     !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Untitled (01-01:31-12) Ago,    !- Name
+    Summer Design Day in Office (01-01:31-12) Ago,    !- Name
     8,                        !- Month
     15,                       !- Day of Month
     SummerDesignDay,          !- Day Type
@@ -156,7 +156,7 @@ SizingPeriod:DesignDay,
     0.98;                     !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Untitled (01-01:31-12) Set,    !- Name
+    Summer Design Day in Office (01-01:31-12) Set,    !- Name
     9,                        !- Month
     15,                       !- Day of Month
     SummerDesignDay,          !- Day Type
@@ -184,7 +184,7 @@ SizingPeriod:DesignDay,
     0.98;                     !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Winter Design Day in Untitled (01-01:31-12),    !- Name
+    Winter Design Day in Office (01-01:31-12),    !- Name
     1,                        !- Month
     15,                       !- Day of Month
     WinterDesignDay,          !- Day Type
@@ -212,7 +212,7 @@ SizingPeriod:DesignDay,
     0;                        !- Sky Clearness
 
 RunPeriod,
-    Untitled (01-01:31-12),    !- Name
+    Office (01-01:31-12),     !- Name
     1,                        !- Begin Month
     1,                        !- Begin Day of Month
     2002,                     !- Begin Year
@@ -3167,7 +3167,7 @@ Construction,
 Construction,
     Project partition_Rev,    !- Name
     Gypsum Plasterboard_.025,    !- Outside Layer
-    6_RVAL_2,                 !- Layer 2
+    5_RVAL_2,                 !- Layer 2
     Gypsum Plasterboard_.025;    !- Layer 3
 
 Construction,
@@ -7566,63 +7566,63 @@ Sizing:Zone,
     ;                         !- Dedicated Outdoor Air High Setpoint Temperature for Design
 
 ZoneControl:Humidistat,
-    Block1:OfficeXSWX1f Humidistat,    !- Name
-    Block1:OfficeXSWX1f,      !- Zone Name
-    Block1:OfficeXSWX1f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block1:OfficeXSWX1f Humidistat,                   !- Name
+    Block1:OfficeXSWX1f,                              !- Zone Name
+    Block1:OfficeXSWX1f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block1:OfficeXSWX1f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block1:OfficeXSEX1f Humidistat,    !- Name
-    Block1:OfficeXSEX1f,      !- Zone Name
-    Block1:OfficeXSEX1f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block1:OfficeXSEX1f Humidistat,                   !- Name
+    Block1:OfficeXSEX1f,                              !- Zone Name
+    Block1:OfficeXSEX1f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block1:OfficeXSEX1f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block1:OfficeXNWX1f Humidistat,    !- Name
-    Block1:OfficeXNWX1f,      !- Zone Name
-    Block1:OfficeXNWX1f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block1:OfficeXNWX1f Humidistat,                   !- Name
+    Block1:OfficeXNWX1f,                              !- Zone Name
+    Block1:OfficeXNWX1f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block1:OfficeXNWX1f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block1:OfficeXNEX1f Humidistat,    !- Name
-    Block1:OfficeXNEX1f,      !- Zone Name
-    Block1:OfficeXNEX1f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block1:OfficeXNEX1f Humidistat,                   !- Name
+    Block1:OfficeXNEX1f,                              !- Zone Name
+    Block1:OfficeXNEX1f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block1:OfficeXNEX1f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block1:CorridorX1f Humidistat,    !- Name
-    Block1:CorridorX1f,       !- Zone Name
-    Block1:CorridorX1f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block1:CorridorX1f Humidistat,                   !- Name
+    Block1:CorridorX1f,                              !- Zone Name
+    Block1:CorridorX1f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block1:CorridorX1f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block2:OfficeXSWX2f Humidistat,    !- Name
-    Block2:OfficeXSWX2f,      !- Zone Name
-    Block2:OfficeXSWX2f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block2:OfficeXSWX2f Humidistat,                   !- Name
+    Block2:OfficeXSWX2f,                              !- Zone Name
+    Block2:OfficeXSWX2f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block2:OfficeXSWX2f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block2:OfficeXSEX2f Humidistat,    !- Name
-    Block2:OfficeXSEX2f,      !- Zone Name
-    Block2:OfficeXSEX2f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block2:OfficeXSEX2f Humidistat,                   !- Name
+    Block2:OfficeXSEX2f,                              !- Zone Name
+    Block2:OfficeXSEX2f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block2:OfficeXSEX2f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block2:OfficeXNWX2f Humidistat,    !- Name
-    Block2:OfficeXNWX2f,      !- Zone Name
-    Block2:OfficeXNWX2f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block2:OfficeXNWX2f Humidistat,                   !- Name
+    Block2:OfficeXNWX2f,                              !- Zone Name
+    Block2:OfficeXNWX2f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block2:OfficeXNWX2f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block2:OfficeXNEX2f Humidistat,    !- Name
-    Block2:OfficeXNEX2f,      !- Zone Name
-    Block2:OfficeXNEX2f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block2:OfficeXNEX2f Humidistat,                   !- Name
+    Block2:OfficeXNEX2f,                              !- Zone Name
+    Block2:OfficeXNEX2f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block2:OfficeXNEX2f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Humidistat,
-    Block2:CorridorX2f Humidistat,    !- Name
-    Block2:CorridorX2f,       !- Zone Name
-    Block2:CorridorX2f Humidifying RH Schedule,    !- Humidifying Relative Humidity Setpoint Schedule Name
+    Block2:CorridorX2f Humidistat,                   !- Name
+    Block2:CorridorX2f,                              !- Zone Name
+    Block2:CorridorX2f Humidifying RH Schedule,      !- Humidifying Relative Humidity Setpoint Schedule Name
     Block2:CorridorX2f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Thermostat,
@@ -8266,23 +8266,22 @@ Output:Constructions,
     Constructions;            !- Details Type 1
 
 Output:Table:SummaryReports,
-    AnnualBuildingUtilityPerformanceSummary,    !- Report 1 Name
-    DemandEndUseComponentsSummary,    !- Report 2 Name
-    SensibleHeatGainSummary,    !- Report 3 Name
-    InputVerificationandResultsSummary,    !- Report 4 Name
-    AdaptiveComfortSummary,    !- Report 5 Name
-    Standard62.1Summary,      !- Report 6 Name
-    ClimaticDataSummary,      !- Report 7 Name
-    EquipmentSummary,         !- Report 8 Name
-    EnvelopeSummary,          !- Report 9 Name
-    LightingSummary,          !- Report 10 Name
-    HVACSizingSummary,        !- Report 11 Name
-    SystemSummary,            !- Report 12 Name
-    ComponentSizingSummary,    !- Report 13 Name
-    OutdoorAirSummary,        !- Report 14 Name
-    ObjectCountSummary,       !- Report 15 Name
-    EndUseEnergyConsumptionOtherFuelsMonthly,    !- Report 16 Name
-    PeakEnergyEndUseOtherFuelsMonthly;    !- Report 17 Name
+    AnnualBuildingUtilityPerformanceSummary,  
+    DemandEndUseComponentsSummary,  
+    SensibleHeatGainSummary,  
+    AdaptiveComfortSummary,  
+    Standard62.1Summary,  
+    ClimaticDataSummary,  
+    EquipmentSummary,  
+    EnvelopeSummary,  
+    LightingSummary,  
+    HVACSizingSummary,  
+    SystemSummary,  
+    ComponentSizingSummary,  
+    OutdoorAirSummary,  
+    ObjectCountSummary,  
+    EndUseEnergyConsumptionOtherFuelsMonthly,  
+    PeakEnergyEndUseOtherFuelsMonthly;
 
 OutputControl:Table:Style,
     TabAndHTML,               !- Column Separator
@@ -8293,67 +8292,59 @@ OutputControl:ReportingTolerances,
     1.11;                     !- Tolerance for Time Cooling Setpoint Not Met
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                        !- Key Value
     Zone Thermal Comfort Fanger Model PMV,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    timestep;                                 !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                        !- Key Value
     Zone Thermal Comfort Fanger Model PPD,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    timestep;                                 !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                                !- Key Value
     Zone Thermal Comfort Mean Radiant Temperature,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    timestep;                                         !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                             !- Key Value
     Zone Thermal Comfort Operative Temperature,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    timestep;                                      !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                            !- Key Value (All Zones)
     Zone Mean Air Temperature,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    timestep;                     !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                !- Key Value
     Zone Mean Radiant Temperature,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    timestep;                         !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
-    Zone Operative Temperature,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    *,                                !- Key Value
+    Zone Operative Temperature,       !- Variable Name
+    timestep;                         !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
-    Zone Air Relative Humidity,    !- Variable Name
-    timestep,                 !- Reporting Frequency
-    On;                       !- Schedule Name
+    *,                                !- Key Value
+    Zone Air Relative Humidity,       !- Variable Name
+    timestep;                         !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                    !- Key Value
     Zone Infiltration Air Change Rate,    !- Variable Name
-    timestep;                 !- Reporting Frequency
+    timestep;                             !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                                   !- Key Value
     Zone Mechanical Ventilation Air Changes per Hour,    !- Variable Name
-    timestep;                 !- Reporting Frequency
+    timestep;                                            !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                                   !- Key Value
     Zone Ventilation Air Change Rate,    !- Variable Name
-    timestep;                 !- Reporting Frequency
+    timestep;                            !- Reporting Frequency
 
 Output:Variable,
     *,                        !- Key Value
