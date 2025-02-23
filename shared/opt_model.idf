@@ -1,5 +1,3 @@
-!- Windows Line endings 
-
 Version,
     9.6;                           !- Version Identifier
 
@@ -13,7 +11,7 @@ SimulationControl,
     ;                              !- Maximum Number of HVAC Sizing Simulation Passes
 
 Building,
-    Office_Paris,                  !- Name
+    OfficeBuilding,                !- Name
     0,                             !- North Axis
     Suburbs,                       !- Terrain
     0.04,                          !- Loads Convergence Tolerance Value
@@ -21,6 +19,9 @@ Building,
     FullExterior,                  !- Solar Distribution
     25,                            !- Maximum Number of Warmup Days
     6;                             !- Minimum Number of Warmup Days
+
+Timestep,
+    6;                        !- Number of Timesteps per Hour
 
 ShadowCalculation,
     PolygonClipping,               !- Shading Calculation Method
@@ -57,9 +58,6 @@ ZoneCapacitanceMultiplier:ResearchSpecial,
     1,                        !- Carbon Dioxide Capacity Multiplier
     1;                        !- Generic Contaminant Capacity Multiplier
 
-Timestep,
-    6;                        !- Number of Timesteps per Hour
-
 ConvergenceLimits,
     1,                        !- Minimum System Timestep
     25;                       !- Maximum HVAC Iterations
@@ -72,144 +70,144 @@ Site:Location,
     38.0;                     !- Elevation
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Office (01-01:31-12) Giu,    !- Name
-    6,                        !- Month
-    15,                       !- Day of Month
-    SummerDesignDay,          !- Day Type
-    31.8,                     !- Maximum DryBulb Temperature
-    11.1,                     !- Daily DryBulb Temperature Range
-    ,                         !- DryBulb Temperature Range Modifier Type
-    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                  !- Humidity Condition Type
-    22.9,                     !- Wetbulb or DewPoint at Maximum DryBulb
-    ,                         !- Humidity Condition Day Schedule Name
-    ,                         !- Humidity Ratio at Maximum DryBulb
-    ,                         !- Enthalpy at Maximum DryBulb
-    ,                         !- Daily WetBulb Temperature Range
-    97924.4,                  !- Barometric Pressure
-    0,                        !- Wind Speed
-    0,                        !- Wind Direction
-    No,                       !- Rain Indicator
-    No,                       !- Snow Indicator
-    Yes,                      !- Daylight Saving Time Indicator
-    ASHRAEClearSky,           !- Solar Model Indicator
-    ,                         !- Beam Solar Day Schedule Name
-    ,                         !- Diffuse Solar Day Schedule Name
-    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
-    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
-    0.98;                     !- Sky Clearness
+    Summer Peak Cooling - June,    !- Name
+    6,                             !- Month
+    15,                            !- Day of Month
+    SummerDesignDay,               !- Day Type
+    31.8,                          !- Maximum DryBulb Temperature
+    11.1,                          !- Daily DryBulb Temperature Range
+    ,                              !- DryBulb Temperature Range Modifier Type
+    ,                              !- DryBulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                       !- Humidity Condition Type
+    22.9,                          !- Wetbulb or DewPoint at Maximum DryBulb
+    ,                              !- Humidity Condition Day Schedule Name
+    ,                              !- Humidity Ratio at Maximum DryBulb
+    ,                              !- Enthalpy at Maximum DryBulb
+    ,                              !- Daily WetBulb Temperature Range
+    97924.4,                       !- Barometric Pressure
+    1.5,                           !- Wind Speed
+    0,                             !- Wind Direction
+    No,                            !- Rain Indicator
+    No,                            !- Snow Indicator
+    Yes,                           !- Daylight Saving Time Indicator
+    ASHRAEClearSky,                !- Solar Model Indicator
+    ,                              !- Beam Solar Day Schedule Name
+    ,                              !- Diffuse Solar Day Schedule Name
+    ,                              !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                              !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    0.98;                          !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Office (01-01:31-12) Lug,    !- Name
-    7,                        !- Month
-    15,                       !- Day of Month
-    SummerDesignDay,          !- Day Type
-    32.1,                     !- Maximum DryBulb Temperature
-    11,                       !- Daily DryBulb Temperature Range
-    ,                         !- DryBulb Temperature Range Modifier Type
-    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                  !- Humidity Condition Type
-    22.8,                     !- Wetbulb or DewPoint at Maximum DryBulb
-    ,                         !- Humidity Condition Day Schedule Name
-    ,                         !- Humidity Ratio at Maximum DryBulb
-    ,                         !- Enthalpy at Maximum DryBulb
-    ,                         !- Daily WetBulb Temperature Range
-    97924.4,                  !- Barometric Pressure
-    0,                        !- Wind Speed
-    0,                        !- Wind Direction
-    No,                       !- Rain Indicator
-    No,                       !- Snow Indicator
-    Yes,                      !- Daylight Saving Time Indicator
-    ASHRAEClearSky,           !- Solar Model Indicator
-    ,                         !- Beam Solar Day Schedule Name
-    ,                         !- Diffuse Solar Day Schedule Name
-    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
-    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
-    0.98;                     !- Sky Clearness
+    Summer Peak Cooling - July,    !- Name
+    7,                             !- Month
+    15,                            !- Day of Month
+    SummerDesignDay,               !- Day Type
+    32.1,                          !- Maximum DryBulb Temperature
+    11,                            !- Daily DryBulb Temperature Range
+    ,                              !- DryBulb Temperature Range Modifier Type
+    ,                              !- DryBulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                       !- Humidity Condition Type
+    22.8,                          !- Wetbulb or DewPoint at Maximum DryBulb
+    ,                              !- Humidity Condition Day Schedule Name
+    ,                              !- Humidity Ratio at Maximum DryBulb
+    ,                              !- Enthalpy at Maximum DryBulb
+    ,                              !- Daily WetBulb Temperature Range
+    97924.4,                       !- Barometric Pressure
+    1.5,                           !- Wind Speed
+    0,                             !- Wind Direction
+    No,                            !- Rain Indicator
+    No,                            !- Snow Indicator
+    Yes,                           !- Daylight Saving Time Indicator
+    ASHRAEClearSky,                !- Solar Model Indicator
+    ,                              !- Beam Solar Day Schedule Name
+    ,                              !- Diffuse Solar Day Schedule Name
+    ,                              !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                              !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    0.98;                          !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Office (01-01:31-12) Ago,    !- Name
-    8,                        !- Month
-    15,                       !- Day of Month
-    SummerDesignDay,          !- Day Type
-    32.8,                     !- Maximum DryBulb Temperature
-    11.5,                     !- Daily DryBulb Temperature Range
-    ,                         !- DryBulb Temperature Range Modifier Type
-    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                  !- Humidity Condition Type
-    23.5,                     !- Wetbulb or DewPoint at Maximum DryBulb
-    ,                         !- Humidity Condition Day Schedule Name
-    ,                         !- Humidity Ratio at Maximum DryBulb
-    ,                         !- Enthalpy at Maximum DryBulb
-    ,                         !- Daily WetBulb Temperature Range
-    97924.4,                  !- Barometric Pressure
-    0,                        !- Wind Speed
-    0,                        !- Wind Direction
-    No,                       !- Rain Indicator
-    No,                       !- Snow Indicator
-    Yes,                      !- Daylight Saving Time Indicator
-    ASHRAEClearSky,           !- Solar Model Indicator
-    ,                         !- Beam Solar Day Schedule Name
-    ,                         !- Diffuse Solar Day Schedule Name
-    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
-    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
-    0.98;                     !- Sky Clearness
+    Summer Peak Cooling - August,  !- Name
+    8,                             !- Month
+    15,                            !- Day of Month
+    SummerDesignDay,               !- Day Type
+    32.8,                          !- Maximum DryBulb Temperature
+    11.5,                          !- Daily DryBulb Temperature Range
+    ,                              !- DryBulb Temperature Range Modifier Type
+    ,                              !- DryBulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                       !- Humidity Condition Type
+    23.5,                          !- Wetbulb or DewPoint at Maximum DryBulb
+    ,                              !- Humidity Condition Day Schedule Name
+    ,                              !- Humidity Ratio at Maximum DryBulb
+    ,                              !- Enthalpy at Maximum DryBulb
+    ,                              !- Daily WetBulb Temperature Range
+    97924.4,                       !- Barometric Pressure
+    1.5,                           !- Wind Speed
+    0,                             !- Wind Direction
+    No,                            !- Rain Indicator
+    No,                            !- Snow Indicator
+    Yes,                           !- Daylight Saving Time Indicator
+    ASHRAEClearSky,                !- Solar Model Indicator
+    ,                              !- Beam Solar Day Schedule Name
+    ,                              !- Diffuse Solar Day Schedule Name
+    ,                              !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                              !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    0.98;                          !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Summer Design Day in Office (01-01:31-12) Set,    !- Name
-    9,                        !- Month
-    15,                       !- Day of Month
-    SummerDesignDay,          !- Day Type
-    29,                       !- Maximum DryBulb Temperature
-    11.5,                     !- Daily DryBulb Temperature Range
-    ,                         !- DryBulb Temperature Range Modifier Type
-    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                  !- Humidity Condition Type
-    20.2,                     !- Wetbulb or DewPoint at Maximum DryBulb
-    ,                         !- Humidity Condition Day Schedule Name
-    ,                         !- Humidity Ratio at Maximum DryBulb
-    ,                         !- Enthalpy at Maximum DryBulb
-    ,                         !- Daily WetBulb Temperature Range
-    97924.4,                  !- Barometric Pressure
-    0,                        !- Wind Speed
-    0,                        !- Wind Direction
-    No,                       !- Rain Indicator
-    No,                       !- Snow Indicator
-    Yes,                      !- Daylight Saving Time Indicator
-    ASHRAEClearSky,           !- Solar Model Indicator
-    ,                         !- Beam Solar Day Schedule Name
-    ,                         !- Diffuse Solar Day Schedule Name
-    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
-    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
-    0.98;                     !- Sky Clearness
+    Late Summer Cooling - September, !- Name
+    9,                             !- Month
+    15,                            !- Day of Month
+    SummerDesignDay,               !- Day Type
+    29,                            !- Maximum DryBulb Temperature
+    11.5,                          !- Daily DryBulb Temperature Range
+    ,                              !- DryBulb Temperature Range Modifier Type
+    ,                              !- DryBulb Temperature Range Modifier Day Schedule Name
+    WetBulb,                       !- Humidity Condition Type
+    20.2,                          !- Wetbulb or DewPoint at Maximum DryBulb
+    ,                              !- Humidity Condition Day Schedule Name
+    ,                              !- Humidity Ratio at Maximum DryBulb
+    ,                              !- Enthalpy at Maximum DryBulb
+    ,                              !- Daily WetBulb Temperature Range
+    97924.4,                       !- Barometric Pressure
+    1.5,                           !- Wind Speed
+    0,                             !- Wind Direction
+    No,                            !- Rain Indicator
+    No,                            !- Snow Indicator
+    Yes,                           !- Daylight Saving Time Indicator
+    ASHRAEClearSky,                !- Solar Model Indicator
+    ,                              !- Beam Solar Day Schedule Name
+    ,                              !- Diffuse Solar Day Schedule Name
+    ,                              !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                              !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    0.98;                          !- Sky Clearness
 
 SizingPeriod:DesignDay,
-    Winter Design Day in Office (01-01:31-12),    !- Name
-    1,                        !- Month
-    15,                       !- Day of Month
-    WinterDesignDay,          !- Day Type
-    -5.9,                     !- Maximum DryBulb Temperature
-    0,                        !- Daily DryBulb Temperature Range
-    ,                         !- DryBulb Temperature Range Modifier Type
-    ,                         !- DryBulb Temperature Range Modifier Day Schedule Name
-    WetBulb,                  !- Humidity Condition Type
-    -5.9,                     !- Wetbulb or DewPoint at Maximum DryBulb
-    ,                         !- Humidity Condition Day Schedule Name
-    ,                         !- Humidity Ratio at Maximum DryBulb
-    ,                         !- Enthalpy at Maximum DryBulb
-    ,                         !- Daily WetBulb Temperature Range
-    97924.4,                  !- Barometric Pressure
-    0.6,                      !- Wind Speed
-    300,                      !- Wind Direction
-    No,                       !- Rain Indicator
-    No,                       !- Snow Indicator
-    No,                       !- Daylight Saving Time Indicator
-    ,                         !- Solar Model Indicator
-    ,                         !- Beam Solar Day Schedule Name
-    ,                         !- Diffuse Solar Day Schedule Name
-    ,                         !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
-    ,                         !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
-    0;                        !- Sky Clearness
+    Winter Peak Heating - January, !- Name
+    1,                             !- Month
+    15,                            !- Day of Month
+    WinterDesignDay,               !- Day Type
+    -5.9,                          !- Maximum DryBulb Temperature
+    0,                             !- Daily DryBulb Temperature Range
+    ,                              !- DryBulb Temperature Range Modifier Type
+    ,                              !- DryBulb Temperature Range Modifier Day Schedule Name
+    DewPoint,                      !- Humidity Condition Type
+    -8.0,                          !- DewPoint at Maximum DryBulb
+    ,                              !- Humidity Condition Day Schedule Name
+    ,                              !- Humidity Ratio at Maximum DryBulb
+    ,                              !- Enthalpy at Maximum DryBulb
+    ,                              !- Daily WetBulb Temperature Range
+    97924.4,                       !- Barometric Pressure
+    0.6,                           !- Wind Speed
+    300,                           !- Wind Direction
+    No,                            !- Rain Indicator
+    No,                            !- Snow Indicator
+    No,                            !- Daylight Saving Time Indicator
+    ASHRAEClearSky,                !- Solar Model Indicator
+    ,                              !- Beam Solar Day Schedule Name
+    ,                              !- Diffuse Solar Day Schedule Name
+    ,                              !- ASHRAE Clear Sky Optical Depth for Beam Irradiance taub
+    ,                              !- ASHRAE Clear Sky Optical Depth for Diffuse Irradiance taud
+    0.3;                           !- Sky Clearness (Adjusted)
 
 RunPeriod,
     Office (01-01:31-12),     !- Name
@@ -228,7 +226,7 @@ RunPeriod,
     No;                       !- Treat Weather as Actual
 
 RunPeriodControl:DaylightSavingTime,
-    Last Sunday in March,     !- Start Date
+    Last Sunday in March,      !- Start Date
     Last Sunday in October;    !- End Date
 
 Site:GroundTemperature:BuildingSurface,
@@ -7542,187 +7540,187 @@ ZoneControl:Humidistat,
     Block2:CorridorX2f Dehumidifying RH Schedule;    !- Dehumidifying Relative Humidity Setpoint Schedule Name
 
 ZoneControl:Thermostat,
-    Block1:OfficeXSWX1f Thermostat,    !- Name
-    Block1:OfficeXSWX1f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block1:OfficeXSWX1f;    !- Control 1 Name
+    Block1:OfficeXSWX1f Thermostat,           !- Thermostat for South-West office in Block 1 (1st floor)
+    Block1:OfficeXSWX1f,                      !- Controlled zone: South-West office
+    Zone Control Type Sched,                  !- Defines when thermostat is active (schedule-based)
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block1:OfficeXSWX1f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block1:OfficeXSEX1f Thermostat,    !- Name
-    Block1:OfficeXSEX1f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block1:OfficeXSEX1f;    !- Control 1 Name
+    Block1:OfficeXSEX1f Thermostat,           !- Thermostat for South-East office in Block 1 (1st floor)
+    Block1:OfficeXSEX1f,                      !- Controlled zone: South-East office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block1:OfficeXSEX1f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block1:OfficeXNWX1f Thermostat,    !- Name
-    Block1:OfficeXNWX1f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block1:OfficeXNWX1f;    !- Control 1 Name
+    Block1:OfficeXNWX1f Thermostat,           !- Thermostat for North-West office in Block 1 (1st floor)
+    Block1:OfficeXNWX1f,                      !- Controlled zone: North-West office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block1:OfficeXNWX1f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block1:OfficeXNEX1f Thermostat,    !- Name
-    Block1:OfficeXNEX1f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block1:OfficeXNEX1f;    !- Control 1 Name
+    Block1:OfficeXNEX1f Thermostat,           !- Thermostat for North-East office in Block 1 (1st floor)
+    Block1:OfficeXNEX1f,                      !- Controlled zone: North-East office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block1:OfficeXNEX1f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block1:CorridorX1f Thermostat,    !- Name
-    Block1:CorridorX1f,       !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block1:CorridorX1f;    !- Control 1 Name
+    Block1:CorridorX1f Thermostat,            !- Thermostat for the central corridor in Block 1 (1st floor)
+    Block1:CorridorX1f,                       !- Controlled zone: Corridor (common area)
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block1:CorridorX1f;  !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block2:OfficeXSWX2f Thermostat,    !- Name
-    Block2:OfficeXSWX2f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block2:OfficeXSWX2f;    !- Control 1 Name
+    Block2:OfficeXSWX2f Thermostat,           !- Thermostat for South-West office in Block 2 (2nd floor)
+    Block2:OfficeXSWX2f,                      !- Controlled zone: South-West office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block2:OfficeXSWX2f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block2:OfficeXSEX2f Thermostat,    !- Name
-    Block2:OfficeXSEX2f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block2:OfficeXSEX2f;    !- Control 1 Name
+    Block2:OfficeXSEX2f Thermostat,           !- Thermostat for South-East office in Block 2 (2nd floor)
+    Block2:OfficeXSEX2f,                      !- Controlled zone: South-East office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block2:OfficeXSEX2f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block2:OfficeXNWX2f Thermostat,    !- Name
-    Block2:OfficeXNWX2f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block2:OfficeXNWX2f;    !- Control 1 Name
+    Block2:OfficeXNWX2f Thermostat,           !- Thermostat for North-West office in Block 2 (2nd floor)
+    Block2:OfficeXNWX2f,                      !- Controlled zone: North-West office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block2:OfficeXNWX2f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block2:OfficeXNEX2f Thermostat,    !- Name
-    Block2:OfficeXNEX2f,      !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block2:OfficeXNEX2f;    !- Control 1 Name
+    Block2:OfficeXNEX2f Thermostat,           !- Thermostat for North-East office in Block 2 (2nd floor)
+    Block2:OfficeXNEX2f,                      !- Controlled zone: North-East office
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block2:OfficeXNEX2f; !- Assigned temperature setpoints for this zone
 
 ZoneControl:Thermostat,
-    Block2:CorridorX2f Thermostat,    !- Name
-    Block2:CorridorX2f,       !- Zone or ZoneList Name
-    Zone Control Type Sched,    !- Control Type Schedule Name
-    ThermostatSetpoint:DualSetpoint,    !- Control 1 Object Type
-    Dual Setpoint - Zone Block2:CorridorX2f;    !- Control 1 Name
+    Block2:CorridorX2f Thermostat,            !- Thermostat for the central corridor in Block 2 (2nd floor)
+    Block2:CorridorX2f,                       !- Controlled zone: Corridor (common area)
+    Zone Control Type Sched,                  !- Defines when thermostat is active
+    ThermostatSetpoint:DualSetpoint,          !- Uses dual setpoints for heating and cooling
+    Dual Setpoint - Zone Block2:CorridorX2f;  !- Assigned temperature setpoints for this zone
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block1:OfficeXSWX1f,    !- Name
+    Dual Setpoint - Zone Block1:OfficeXSWX1f,         !- Name
     Block1:OfficeXSWX1f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block1:OfficeXSWX1f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block1:OfficeXSWX1f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block1:OfficeXSEX1f,    !- Name
+    Dual Setpoint - Zone Block1:OfficeXSEX1f,         !- Name
     Block1:OfficeXSEX1f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block1:OfficeXSEX1f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block1:OfficeXSEX1f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block1:OfficeXNWX1f,    !- Name
+    Dual Setpoint - Zone Block1:OfficeXNWX1f,         !- Name
     Block1:OfficeXNWX1f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block1:OfficeXNWX1f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block1:OfficeXNWX1f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block1:OfficeXNEX1f,    !- Name
+    Dual Setpoint - Zone Block1:OfficeXNEX1f,         !- Name
     Block1:OfficeXNEX1f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block1:OfficeXNEX1f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block1:OfficeXNEX1f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block1:CorridorX1f,    !- Name
+    Dual Setpoint - Zone Block1:CorridorX1f,         !- Name
     Block1:CorridorX1f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block1:CorridorX1f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block1:CorridorX1f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block2:OfficeXSWX2f,    !- Name
+    Dual Setpoint - Zone Block2:OfficeXSWX2f,         !- Name
     Block2:OfficeXSWX2f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block2:OfficeXSWX2f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block2:OfficeXSWX2f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block2:OfficeXSEX2f,    !- Name
+    Dual Setpoint - Zone Block2:OfficeXSEX2f,         !- Name
     Block2:OfficeXSEX2f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block2:OfficeXSEX2f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block2:OfficeXSEX2f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block2:OfficeXNWX2f,    !- Name
+    Dual Setpoint - Zone Block2:OfficeXNWX2f,         !- Name
     Block2:OfficeXNWX2f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block2:OfficeXNWX2f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block2:OfficeXNWX2f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block2:OfficeXNEX2f,    !- Name
+    Dual Setpoint - Zone Block2:OfficeXNEX2f,         !- Name
     Block2:OfficeXNEX2f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block2:OfficeXNEX2f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block2:OfficeXNEX2f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ThermostatSetpoint:DualSetpoint,
-    Dual Setpoint - Zone Block2:CorridorX2f,    !- Name
+    Dual Setpoint - Zone Block2:CorridorX2f,         !- Name
     Block2:CorridorX2f Heating Setpoint Schedule,    !- Heating Setpoint Temperature Schedule Name
-    Block2:CorridorX2f Cooling SP Sch;    !- Cooling Setpoint Temperature Schedule Name
+    Block2:CorridorX2f Cooling SP Sch;               !- Cooling Setpoint Temperature Schedule Name
 
 ZoneHVAC:IdealLoadsAirSystem,
-    Block1:OfficeXSWX1f Ideal Loads Air,    !- Name
-    ,                         !- Availability Schedule Name
-    Node Block1:OfficeXSWX1f In,    !- Zone Supply Air Node Name
-    ,                         !- Zone Exhaust Air Node Name
-    ,                         !- System Inlet Air Node Name
-    35,                       !- Maximum Heating Supply Air Temperature
-    12,                       !- Minimum Cooling Supply Air Temperature
-    0.0156,                   !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
-    LimitCapacity,            !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
-    Autosize,                 !- Maximum Sensible Heating Capacity
-    LimitFlowRateAndCapacity,    !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
-    Autosize,                 !- Maximum Total Cooling Capacity
+    Block1:OfficeXSWX1f Ideal Loads Air,             !- Name
+    ,                                                !- Availability Schedule Name
+    Node Block1:OfficeXSWX1f In,                     !- Zone Supply Air Node Name
+    ,                                                !- Zone Exhaust Air Node Name
+    ,                                                !- System Inlet Air Node Name
+    35,                                              !- Maximum Heating Supply Air Temperature
+    12,                                              !- Minimum Cooling Supply Air Temperature
+    0.0156,                                          !- Maximum Heating Supply Air Humidity Ratio
+    0.0077,                                          !- Minimum Cooling Supply Air Humidity Ratio
+    LimitCapacity,                                   !- Heating Limit
+    Autosize,                                        !- Maximum Heating Air Flow Rate
+    Autosize,                                        !- Maximum Sensible Heating Capacity
+    LimitFlowRateAndCapacity,                        !- Cooling Limit
+    Autosize,                                        !- Maximum Cooling Air Flow Rate
+    Autosize,                                        !- Maximum Total Cooling Capacity
     Block1:OfficeXSWX1f Heating Availability Sch,    !- Heating Availability Schedule Name
     Block1:OfficeXSWX1f Cooling Availability Sch,    !- Cooling Availability Schedule Name
-    Humidistat,               !- Dehumidification Control Type
-    ,                         !- Cooling Sensible Heat Ratio
-    None,                     !- Humidification Control Type
-    Block1:OfficeXSWX1f,      !- Design Specification Outdoor Air Object Name
-    ,                         !- Outdoor Air Inlet Node Name
-    ,                         !- Demand Controlled Ventilation Type
-    NoEconomizer,             !- Outdoor Air Economizer Type
-    Sensible,                 !- Heat Recovery Type
-    0.7,                      !- Sensible Heat Recovery Effectiveness
-    0.65;                     !- Latent Heat Recovery Effectiveness
+    Humidistat,                                      !- Dehumidification Control Type
+    ,                                                !- Cooling Sensible Heat Ratio
+    None,                                            !- Humidification Control Type
+    Block1:OfficeXSWX1f,                             !- Design Specification Outdoor Air Object Name
+    ,                                                !- Outdoor Air Inlet Node Name
+    ,                                                !- Demand Controlled Ventilation Type
+    NoEconomizer,                                    !- Outdoor Air Economizer Type
+    Sensible,                                        !- Heat Recovery Type
+    0.7,                                             !- Sensible Heat Recovery Effectiveness
+    0.65;                                            !- Latent Heat Recovery Effectiveness
 
 ZoneHVAC:IdealLoadsAirSystem,
-    Block1:OfficeXSEX1f Ideal Loads Air,    !- Name
-    ,                         !- Availability Schedule Name
-    Node Block1:OfficeXSEX1f In,    !- Zone Supply Air Node Name
-    ,                         !- Zone Exhaust Air Node Name
-    ,                         !- System Inlet Air Node Name
-    35,                       !- Maximum Heating Supply Air Temperature
-    12,                       !- Minimum Cooling Supply Air Temperature
-    0.0156,                   !- Maximum Heating Supply Air Humidity Ratio
-    0.0077,                   !- Minimum Cooling Supply Air Humidity Ratio
-    LimitCapacity,            !- Heating Limit
-    Autosize,                 !- Maximum Heating Air Flow Rate
-    Autosize,                 !- Maximum Sensible Heating Capacity
-    LimitFlowRateAndCapacity,    !- Cooling Limit
-    Autosize,                 !- Maximum Cooling Air Flow Rate
-    Autosize,                 !- Maximum Total Cooling Capacity
+    Block1:OfficeXSEX1f Ideal Loads Air,             !- Name
+    ,                                                !- Availability Schedule Name
+    Node Block1:OfficeXSEX1f In,                     !- Zone Supply Air Node Name
+    ,                                                !- Zone Exhaust Air Node Name
+    ,                                                !- System Inlet Air Node Name
+    35,                                              !- Maximum Heating Supply Air Temperature
+    12,                                              !- Minimum Cooling Supply Air Temperature
+    0.0156,                                          !- Maximum Heating Supply Air Humidity Ratio
+    0.0077,                                          !- Minimum Cooling Supply Air Humidity Ratio
+    LimitCapacity,                                   !- Heating Limit
+    Autosize,                                        !- Maximum Heating Air Flow Rate
+    Autosize,                                        !- Maximum Sensible Heating Capacity
+    LimitFlowRateAndCapacity,                        !- Cooling Limit
+    Autosize,                                        !- Maximum Cooling Air Flow Rate
+    Autosize,                                        !- Maximum Total Cooling Capacity
     Block1:OfficeXSEX1f Heating Availability Sch,    !- Heating Availability Schedule Name
     Block1:OfficeXSEX1f Cooling Availability Sch,    !- Cooling Availability Schedule Name
-    Humidistat,               !- Dehumidification Control Type
-    ,                         !- Cooling Sensible Heat Ratio
-    None,                     !- Humidification Control Type
-    Block1:OfficeXSEX1f,      !- Design Specification Outdoor Air Object Name
-    ,                         !- Outdoor Air Inlet Node Name
-    ,                         !- Demand Controlled Ventilation Type
-    NoEconomizer,             !- Outdoor Air Economizer Type
-    Sensible,                 !- Heat Recovery Type
-    0.7,                      !- Sensible Heat Recovery Effectiveness
-    0.65;                     !- Latent Heat Recovery Effectiveness
+    Humidistat,                                      !- Dehumidification Control Type
+    ,                                                !- Cooling Sensible Heat Ratio
+    None,                                            !- Humidification Control Type
+    Block1:OfficeXSEX1f,                             !- Design Specification Outdoor Air Object Name
+    ,                                                !- Outdoor Air Inlet Node Name
+    ,                                                !- Demand Controlled Ventilation Type
+    NoEconomizer,                                    !- Outdoor Air Economizer Type
+    Sensible,                                        !- Heat Recovery Type
+    0.7,                                             !- Sensible Heat Recovery Effectiveness
+    0.65;                                            !- Latent Heat Recovery Effectiveness
 
 ZoneHVAC:IdealLoadsAirSystem,
-    Block1:OfficeXNWX1f Ideal Loads Air,    !- Name
-    ,                         !- Availability Schedule Name
-    Node Block1:OfficeXNWX1f In,    !- Zone Supply Air Node Name
+    Block1:OfficeXNWX1f Ideal Loads Air,             !- Name
+    ,                                                !- Availability Schedule Name
+    Node Block1:OfficeXNWX1f In,                     !- Zone Supply Air Node Name
     ,                         !- Zone Exhaust Air Node Name
     ,                         !- System Inlet Air Node Name
     35,                       !- Maximum Heating Supply Air Temperature
@@ -8182,22 +8180,20 @@ Output:Constructions,
     Constructions;            !- Details Type 1
 
 Output:Table:SummaryReports,
-    AnnualBuildingUtilityPerformanceSummary,  
-    DemandEndUseComponentsSummary,  
-    SensibleHeatGainSummary,  
-    AdaptiveComfortSummary,  
-    Standard62.1Summary,  
-    ClimaticDataSummary,  
-    EquipmentSummary,  
-    EnvelopeSummary,  
-    LightingSummary,  
-    HVACSizingSummary,  
-    SystemSummary,  
-    ComponentSizingSummary,  
-    OutdoorAirSummary,  
-    ObjectCountSummary,  
-    EndUseEnergyConsumptionOtherFuelsMonthly,  
-    PeakEnergyEndUseOtherFuelsMonthly;
+    AnnualBuildingUtilityPerformanceSummary,
+    DemandEndUseComponentsSummary,
+    SensibleHeatGainSummary,
+    AdaptiveComfortSummary,
+    Standard62.1Summary,
+    ClimaticDataSummary,
+    EquipmentSummary,
+    EnvelopeSummary,
+    LightingSummary,
+    HVACSizingSummary,
+    SystemSummary,
+    ComponentSizingSummary,
+    OutdoorAirSummary,
+    ObjectCountSummary;
 
 OutputControl:Table:Style,
     TabAndHTML,               !- Column Separator
@@ -8492,10 +8488,6 @@ Output:Meter,
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
-    NATURALGAS:Facility,      !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
     InteriorEquipment:Electricity,    !- Key Name
     timestep;                 !- Reporting Frequency
 
@@ -8594,6 +8586,8 @@ EnvironmentalImpactFactors,
     6.2727,                   !- Total Carbon Equivalent Emission Factor From CH4
     0.2727;                   !- Total Carbon Equivalent Emission Factor From CO2
 
-Output:Diagnostics,
-    DisplayAdvancedReportVariables,
-    DisplayExtraWarnings;
+!Output:Diagnostics,
+!    DisplayAdvancedReportVariables,
+!    DisplayExtraWarnings,
+!    DisplayUnusedObjects,
+!    DisplayUnusedSchedules;
