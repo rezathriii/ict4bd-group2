@@ -8488,23 +8488,7 @@ Output:Meter,
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
-    InteriorEquipment:Electricity,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    InteriorLights:Electricity,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    ELECTRIC EQUIPMENT#Block1:OfficeXSWX1f#07:InteriorEquipment*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
     ELECTRIC EQUIPMENT#Block1:OfficeXSWX1f#GeneralLights*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    ELECTRIC EQUIPMENT#Block1:OfficeXSEX1f#07:InteriorEquipment*,    !- Key Name
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
@@ -8512,15 +8496,7 @@ Output:Meter,
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
-    ELECTRIC EQUIPMENT#Block1:OfficeXNWX1f#07:InteriorEquipment*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
     ELECTRIC EQUIPMENT#Block1:OfficeXNWX1f#GeneralLights*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    ELECTRIC EQUIPMENT#Block1:OfficeXNEX1f#07:InteriorEquipment*,    !- Key Name
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
@@ -8528,15 +8504,7 @@ Output:Meter,
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
-    ELECTRIC EQUIPMENT#Block1:CorridorX1f#07:InteriorEquipment*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
     ELECTRIC EQUIPMENT#Block1:CorridorX1f#GeneralLights*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    ELECTRIC EQUIPMENT#Block2:OfficeXSWX2f#07:InteriorEquipment*,    !- Key Name
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
@@ -8544,15 +8512,7 @@ Output:Meter,
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
-    ELECTRIC EQUIPMENT#Block2:OfficeXSEX2f#07:InteriorEquipment*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
     ELECTRIC EQUIPMENT#Block2:OfficeXSEX2f#GeneralLights*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    ELECTRIC EQUIPMENT#Block2:OfficeXNWX2f#07:InteriorEquipment*,    !- Key Name
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
@@ -8560,15 +8520,7 @@ Output:Meter,
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
-    ELECTRIC EQUIPMENT#Block2:OfficeXNEX2f#07:InteriorEquipment*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
     ELECTRIC EQUIPMENT#Block2:OfficeXNEX2f#GeneralLights*,    !- Key Name
-    timestep;                 !- Reporting Frequency
-
-Output:Meter,
-    ELECTRIC EQUIPMENT#Block2:CorridorX2f#07:InteriorEquipment*,    !- Key Name
     timestep;                 !- Reporting Frequency
 
 Output:Meter,
