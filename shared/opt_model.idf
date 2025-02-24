@@ -8479,9 +8479,147 @@ Output:Variable,
     timestep;                 !- Reporting Frequency
 
 Output:Variable,
-    *,                        !- Key Value
+    *,                             !- Key Value
     Zone Air CO2 Concentration,    !- Variable Name
-    timestep;                 !- Reporting Frequency
+    timestep;                      !- Reporting Frequency
+
+! Enable verbose EMS debugging for better troubleshooting
+Output:EnergyManagementSystem,
+    Verbose,                 !- Actuator Availability Dictionary Reporting
+    Verbose,                 !- Internal Variable Availability Dictionary Reporting
+    Verbose;                 !- EMS Runtime Language Debug Output Level
+
+! Declare sensors to monitor zone temperatures
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block1_OfficeXSWX1f,
+    Block1:OfficeXSWX1f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block1_OfficeXSEX1f,
+    Block1:OfficeXSEX1f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block1_OfficeXNWX1f,
+    Block1:OfficeXNWX1f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block1_OfficeXNEX1f,
+    Block1:OfficeXNEX1f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block1_CorridorX1f,
+    Block1:CorridorX1f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block2_OfficeXSWX2f,
+    Block2:OfficeXSWX2f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block2_OfficeXSEX2f,
+    Block2:OfficeXSEX2f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block2_OfficeXNWX2f,
+    Block2:OfficeXNWX2f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block2_OfficeXNEX2f,
+    Block2:OfficeXNEX2f,
+    Zone Mean Air Temperature;
+
+EnergyManagementSystem:Sensor,
+    ZoneTemp_Sensor_Block2_CorridorX2f,
+    Block2:CorridorX2f,
+    Zone Mean Air Temperature;
+
+! Define EMS program to update temperature readings
+EnergyManagementSystem:Program,
+    Assign_Temp_FMU,
+    Set ZoneTemp_Block1_OfficeXSWX1f = ZoneTemp_Sensor_Block1_OfficeXSWX1f,
+    Set ZoneTemp_Block1_OfficeXSEX1f = ZoneTemp_Sensor_Block1_OfficeXSEX1f,
+    Set ZoneTemp_Block1_OfficeXNWX1f = ZoneTemp_Sensor_Block1_OfficeXNWX1f,
+    Set ZoneTemp_Block1_OfficeXNEX1f = ZoneTemp_Sensor_Block1_OfficeXNEX1f,
+    Set ZoneTemp_Block1_CorridorX1f = ZoneTemp_Sensor_Block1_CorridorX1f,
+    Set ZoneTemp_Block2_OfficeXSWX2f = ZoneTemp_Sensor_Block2_OfficeXSWX2f,
+    Set ZoneTemp_Block2_OfficeXSEX2f = ZoneTemp_Sensor_Block2_OfficeXSEX2f,
+    Set ZoneTemp_Block2_OfficeXNWX2f = ZoneTemp_Sensor_Block2_OfficeXNWX2f,
+    Set ZoneTemp_Block2_OfficeXNEX2f = ZoneTemp_Sensor_Block2_OfficeXNEX2f,
+    Set ZoneTemp_Block2_CorridorX2f = ZoneTemp_Sensor_Block2_CorridorX2f;
+
+! Ensure EMS program is executed at each timestep
+EnergyManagementSystem:ProgramCallingManager,
+    Assign_Temp_FMU_Manager,
+    BeginTimestepBeforePredictor,
+    Assign_Temp_FMU;
+
+! Enable FMU Export Mode
+ExternalInterface,
+    FunctionalMockupUnitExport;
+
+! Expose zone temperatures as outputs in FMU
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block1:OfficeXSWX1f,
+    Zone Mean Air Temperature,
+    T_Block1_OfficeXSWX1f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block1:OfficeXSEX1f,
+    Zone Mean Air Temperature,
+    T_Block1_OfficeXSEX1f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block1:OfficeXNWX1f,
+    Zone Mean Air Temperature,
+    T_Block1_OfficeXNWX1f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block1:OfficeXNEX1f,
+    Zone Mean Air Temperature,
+    T_Block1_OfficeXNEX1f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block1:CorridorX1f,
+    Zone Mean Air Temperature,
+    T_Block1_CorridorX1f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block2:OfficeXSWX2f,
+    Zone Mean Air Temperature,
+    T_Block2_OfficeXSWX2f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block2:OfficeXSEX2f,
+    Zone Mean Air Temperature,
+    T_Block2_OfficeXSEX2f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block2:OfficeXNWX2f,
+    Zone Mean Air Temperature,
+    T_Block2_OfficeXNWX2f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block2:OfficeXNEX2f,
+    Zone Mean Air Temperature,
+    T_Block2_OfficeXNEX2f;
+
+ExternalInterface:FunctionalMockupUnitExport:From:Variable,
+    Block2:CorridorX2f,
+    Zone Mean Air Temperature,
+    T_Block2_CorridorX2f;
+
+! Ensure EnergyPlus records the zone temperatures in output reports
+Output:Variable,
+    *,
+    Zone Mean Air Temperature,
+    timestep;
 
 Output:Meter,
     Electricity:Facility,     !- Key Name

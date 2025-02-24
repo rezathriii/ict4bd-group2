@@ -2,6 +2,7 @@ shared/*
 !shared/opt_model_V242.idf
 !shared/paris_2005.epw
 !shared/socket.cfg
+!shared/opt_model.fmu
 
 ###########################
 # MacOS gitignore template
